@@ -1,3 +1,10 @@
+"""
+projekt_2.py: druhý projekt do Engeto Online Python Akademie
+
+author: Dajana Kočková
+email: d.kockova@gmail.com
+"""
+
 import random
 import time
 
