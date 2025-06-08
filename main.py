@@ -99,36 +99,36 @@ def display_bulls_cows(bulls: int, cows: int):
     cow_text = f"{cows} cow" if cows == 1 else f"{cows} cows"
     print(f"{bull_text}, {cow_text}")
 
-secret_number = generate_secret_number()
-print(secret_number)
-attempts = 0
+if __name__ == "__main__":
+    secret_number = generate_secret_number()
+    attempts = 0
 
-print("Hi there!")
-print(separator)
-print("I've generated a random 4 digit number for you.\n"
-"Let's play a bulls and cows game.")
-print(separator)
-print("Here are some rules for you.\n"
+    print("Hi there!")
+    print(separator)
+    print("I've generated a random 4 digit number for you.\n"
+    "Let's play a bulls and cows game.")
+    print(separator)
+    print("Here are some rules for you.\n"
       "The generated number:\n"
       "- Does not start with zero\n"
       "- Contains only digits (0–9)\n"
       "- Has no repeated digits")
-print(separator)
+    print(separator)
 
-start = time.time()
+    start = time.time()
 
-while True:
-    user_number = validate_input()
-    bulls,cows = bulls_cows_evaluation(secret_number,user_number)
-    display_bulls_cows(bulls,cows)
-    attempts +=1
-    if bulls < 4:
-        print(f"Number of valid attempts: {attempts}")
-        print(separator)
-    else:
-        print(f"Correct, you've guessed the right number in {attempts} guesses!")
-        print(separator)
-        break
+    while True:
+        user_number = validate_input()
+        bulls,cows = bulls_cows_evaluation(secret_number,user_number)
+        display_bulls_cows(bulls,cows)
+        attempts +=1
+        if bulls < 4:
+            (f"Number of valid attempts: {attempts}")
+            print(separator)
+        else:
+            print(f"Correct, you've guessed the right number in {attempts} guesses!")
+            print(separator)
+            break
 
-end = time.time()
-print(f"It took you {round(end-start,2)} seconds to solve this game!\nGood job!")
+    end = time.time()
+    print(f"It took you {round(end-start,2)} seconds to solve this game!\nGood job!")
